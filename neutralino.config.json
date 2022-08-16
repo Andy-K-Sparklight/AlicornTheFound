@@ -1,0 +1,43 @@
+{
+  "applicationId": "rarityeg.mc.af",
+  "version": "1.0.0",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/dist/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeAllowList": ["app.*", "os.*", "debug.log"],
+  "globalVariables": {},
+  "modes": {
+    "window": {
+      "title": "Alicorn: The Found",
+      "width": 960,
+      "height": 540,
+      "minWidth": 960,
+      "minHeight": 540,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/resources/icons/Icon.png",
+      "enableInspector": true,
+      "borderless": false,
+      "maximize": false,
+      "hidden": false,
+      "resizable": true,
+      "exitProcessOnClose": false
+    }
+  },
+  "cli": {
+    "binaryName": "AlicornTheFound",
+    "resourcesPath": "/dist/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/neutralino.js",
+    "binaryVersion": "4.7.0",
+    "clientVersion": "3.6.0"
+  }
+}

@@ -1,0 +1,23 @@
+# Developer tools' files
+.lite_workspace.lua
+
+# Neutralinojs binaries and builds
+/bin
+/dist
+
+# Neutralinojs client (minified)
+# Yes we need it
+# neutralino.js
+
+# Neutralinojs related files
+.storage
+*.log
+
+# Temp files
+.tmp
+
+# Build files
+/build
+
+# Node
+node_modules
