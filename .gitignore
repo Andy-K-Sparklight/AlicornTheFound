@@ -18,6 +18,11 @@
 
 # Build files
 /build
+/out
 
 # Node
 node_modules
+
+# Tools
+bin2header*
+upx*

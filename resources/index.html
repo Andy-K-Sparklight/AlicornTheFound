@@ -14,7 +14,10 @@
           NODE_ENV: "development",
         },
       };
+      global = globalThis || window;
+      require = () => undefined;
     </script>
+    <script src="Aria2.js"></script>
     <script src="Main.js"></script>
   </body>
 </html>

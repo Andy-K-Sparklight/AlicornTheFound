@@ -1,13 +1,16 @@
 import "neutralinojs-types";
-import { main } from "./ui/UIMain";
+import { kernelMain } from "./kernel/KernelMain";
+import { uiMain } from "./ui/UIMain";
 
-function init() {
+async function init() {
   Neutralino.init();
-  Neutralino.events.on("windowClose", () => {
-    Neutralino.app.exit();
-  });
-  main();
+  await kernelMain();
+  uiMain();
 }
-window.addEventListener("DOMContentLoaded", () => {
-  init();
+
+window.addEventListener("DOMContentLoaded", async () => {
+  await init();
+  console.log((await Neutralino.os.spawnProcess("dir")).pid);
+  // await startAria2Daemon();
+  // await stopAria2Daemon();
 });

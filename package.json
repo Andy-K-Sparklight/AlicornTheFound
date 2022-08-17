@@ -4,19 +4,27 @@
   "license": "GPL-3.0-or-later",
   "scripts": {
     "watch": "rollup -cw",
-    "build": "rollup -c",
-    "go": "./bt.sh && neu run"
+    "build": "rollup -c && ./bt.sh",
+    "go": "neu run",
+    "mkwin": "./rm4b.sh && neu build --release && ./mkbin4win.sh",
+    "mkosx": "./rm4b.sh && neu build --release && ./mkbin4osx.sh",
+    "mkgnu": "./rm4b.sh && neu build --release && ./mkbin.sh",
+    "mk": "./rm4b.sh && neu build --release && ./mkbin4win.sh && ./mkbin4osx.sh && ./mkbin.sh",
+    "clean": "rm -rf build dist out"
   },
   "devDependencies": {
     "@neutralinojs/neu": "^9.3.1",
     "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.4",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@types/react-router-dom": "^5.3.3",
+    "browserify": "^17.0.0",
     "neutralinojs-types": "^2.0.0",
     "rollup": "^2.78.0",
+    "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
@@ -24,9 +32,12 @@
     "@chakra-ui/react": "^2.2.8",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
+    "@types/shell-escape": "^0.2.0",
+    "aria2": "^4.1.2",
     "framer-motion": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.3.0",
+    "shell-escape": "^0.2.0"
   }
 }

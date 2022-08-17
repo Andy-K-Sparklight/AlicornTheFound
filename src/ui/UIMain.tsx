@@ -1,23 +1,23 @@
 import { Button, ChakraProvider } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 import { createRoot } from "react-dom/client";
-import { commitMsg } from "../kernel/Listeners";
 
-export function UIMain(): JSX.Element {
-  const [msg, setMsg] = useState("Say Hi");
-
+export function RendererBase(): JSX.Element {
   return (
     <ChakraProvider>
-      <Button onClick={onBtnClick}>{msg}</Button>
+      <Button>Click Me</Button>
     </ChakraProvider>
   );
-
-  function onBtnClick(): void {
-    setMsg(commitMsg("ping", "Hi"));
-  }
 }
 
-export function main(): void {
+export function uiMain(): void {
+  attachWindowEvents();
   const root = createRoot(document.getElementById("afmain")!);
-  root.render(<UIMain />);
+  root.render(<RendererBase />);
+}
+
+function attachWindowEvents(): void {
+  Neutralino.events.on("windowClose", () => {
+    Neutralino.app.exit();
+  });
 }

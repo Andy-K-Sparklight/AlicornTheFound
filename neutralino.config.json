@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "defaultMode": "window",
   "port": 0,
-  "documentRoot": "/dist/",
+  "documentRoot": "/out/",
   "url": "/",
   "enableServer": true,
   "enableNativeAPI": true,
@@ -12,7 +12,7 @@
     "enabled": true,
     "writeToLogFile": true
   },
-  "nativeAllowList": ["app.*", "os.*", "debug.log"],
+  "nativeAllowList": ["app.*", "os.*", "debug.log", "computer.*"],
   "globalVariables": {},
   "modes": {
     "window": {
@@ -29,12 +29,12 @@
       "maximize": false,
       "hidden": false,
       "resizable": true,
-      "exitProcessOnClose": false
+      "exitProcessOnClose": true
     }
   },
   "cli": {
     "binaryName": "AlicornTheFound",
-    "resourcesPath": "/dist/",
+    "resourcesPath": "/out/",
     "extensionsPath": "/extensions/",
     "clientLibrary": "/resources/neutralino.js",
     "binaryVersion": "4.7.0",
